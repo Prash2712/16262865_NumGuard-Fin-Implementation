@@ -78,15 +78,7 @@ notebooks/NumGuard_Fin_Colab.ipynb
 
 Upload the repository to Google Drive, use a CUDA-enabled Colab runtime, and follow [`RUN_IN_COLAB.md`](RUN_IN_COLAB.md). Fresh outputs are written separately from the retained development evidence. The public-test command must remain blocked unless the semantic release criterion genuinely becomes feasible.
 
-## Dissertation
 
-The current dissertation is stored under:
-
-```text
-docs/dissertation/16262865_Prasanth_Balisetty_NumGuard_Fin_Enhanced_Final.docx
-```
-
-The dissertation explicitly treats the reported statistics as development evidence because the same development split informed multiple engineering iterations.
 
 ## Development history
 
