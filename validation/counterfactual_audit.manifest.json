@@ -1,0 +1,24 @@
+{
+  "created_at_utc": "2026-08-17T01:01:37.386408+00:00",
+  "dataset_split": "dev",
+  "dataset_path": "data/fixtures/finqa_structured_fixture.json",
+  "dataset_sha256": "314aa7463a65c8d23778fc8bea99302deac3f4b80ecce93c8d5689fb289a13fd",
+  "examples": 12,
+  "seed": 42,
+  "shuffle": false,
+  "audit_layer": "candidate_mechanism",
+  "example_ids": [
+    "fixture/report_01.pdf-1",
+    "fixture/report_02.pdf-1",
+    "fixture/report_03.pdf-1",
+    "fixture/report_04.pdf-1",
+    "fixture/report_05.pdf-1",
+    "fixture/report_06.pdf-1",
+    "fixture/report_07.pdf-1",
+    "fixture/report_08.pdf-1",
+    "fixture/report_09.pdf-1",
+    "fixture/report_10.pdf-1",
+    "fixture/report_11.pdf-1",
+    "fixture/report_12.pdf-1"
+  ]
+}

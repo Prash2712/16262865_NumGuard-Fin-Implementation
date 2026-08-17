@@ -1,0 +1,26 @@
+{
+  "threshold": 0.0,
+  "target_risk": 0.01,
+  "observed_risk": 0.0,
+  "risk_upper_bound": 0.003433509056820341,
+  "coverage": 1.0,
+  "accepted_examples": 871,
+  "calibration_examples": 871,
+  "confidence_level": 0.95,
+  "risk_type": "provenance",
+  "feasible": true,
+  "minimum_coverage": 0.05,
+  "minimum_accepted": 30,
+  "reason": "target achieved with the required non-zero coverage gate",
+  "best_available_threshold": null,
+  "best_available_risk_upper_bound": null,
+  "best_available_coverage": null,
+  "created_at_utc": "2026-08-01T12:44:37.618194+00:00",
+  "method": "selector_guided_proof_lock",
+  "source_predictions": "results/development/predictions.csv",
+  "source_predictions_sha256": "dcb3d868c6c3bc6245fd175f8a1847cea9e9c4183bf55fcac629f77f19c4cd4c",
+  "source_configuration_ids": [
+    "4c6099853873"
+  ],
+  "confidence_field": "selected_candidate_confidence"
+}

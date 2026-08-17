@@ -1,0 +1,207 @@
+{
+  "selector_objective": "cross-validated safe blend of heuristic and within-question pairwise proof ranking",
+  "training_candidate_rows": 1086171,
+  "pairwise_training_rows": 217564,
+  "hard_negatives_per_positive": 24,
+  "training_examples": 6093,
+  "positive_candidate_rows": 4554,
+  "candidate_recall_on_training_examples": 0.5097653044477269,
+  "heuristic_top1_accuracy_given_candidate_recall": 0.14166130070830651,
+  "learned_out_of_fold_top1_accuracy_given_candidate_recall": 0.0051513200257566,
+  "selected_blend_weight": 0.05,
+  "out_of_fold_top1_accuracy_given_candidate_recall": 0.14359304571796522,
+  "top1_accuracy_given_candidate_recall": 0.14359304571796522,
+  "blend_grid_results": [
+    {
+      "blend_weight": 0.0,
+      "top1_correct": 440,
+      "top1_accuracy_given_candidate_recall": 0.14166130070830651
+    },
+    {
+      "blend_weight": 0.05,
+      "top1_correct": 446,
+      "top1_accuracy_given_candidate_recall": 0.14359304571796522
+    },
+    {
+      "blend_weight": 0.1,
+      "top1_correct": 446,
+      "top1_accuracy_given_candidate_recall": 0.14359304571796522
+    },
+    {
+      "blend_weight": 0.15,
+      "top1_correct": 446,
+      "top1_accuracy_given_candidate_recall": 0.14359304571796522
+    },
+    {
+      "blend_weight": 0.2,
+      "top1_correct": 446,
+      "top1_accuracy_given_candidate_recall": 0.14359304571796522
+    },
+    {
+      "blend_weight": 0.25,
+      "top1_correct": 446,
+      "top1_accuracy_given_candidate_recall": 0.14359304571796522
+    },
+    {
+      "blend_weight": 0.3,
+      "top1_correct": 446,
+      "top1_accuracy_given_candidate_recall": 0.14359304571796522
+    },
+    {
+      "blend_weight": 0.35,
+      "top1_correct": 446,
+      "top1_accuracy_given_candidate_recall": 0.14359304571796522
+    },
+    {
+      "blend_weight": 0.4,
+      "top1_correct": 446,
+      "top1_accuracy_given_candidate_recall": 0.14359304571796522
+    },
+    {
+      "blend_weight": 0.45,
+      "top1_correct": 446,
+      "top1_accuracy_given_candidate_recall": 0.14359304571796522
+    },
+    {
+      "blend_weight": 0.5,
+      "top1_correct": 446,
+      "top1_accuracy_given_candidate_recall": 0.14359304571796522
+    },
+    {
+      "blend_weight": 0.55,
+      "top1_correct": 446,
+      "top1_accuracy_given_candidate_recall": 0.14359304571796522
+    },
+    {
+      "blend_weight": 0.6,
+      "top1_correct": 446,
+      "top1_accuracy_given_candidate_recall": 0.14359304571796522
+    },
+    {
+      "blend_weight": 0.65,
+      "top1_correct": 445,
+      "top1_accuracy_given_candidate_recall": 0.14327108821635545
+    },
+    {
+      "blend_weight": 0.7,
+      "top1_correct": 444,
+      "top1_accuracy_given_candidate_recall": 0.14294913071474566
+    },
+    {
+      "blend_weight": 0.75,
+      "top1_correct": 444,
+      "top1_accuracy_given_candidate_recall": 0.14294913071474566
+    },
+    {
+      "blend_weight": 0.8,
+      "top1_correct": 443,
+      "top1_accuracy_given_candidate_recall": 0.14262717321313587
+    },
+    {
+      "blend_weight": 0.85,
+      "top1_correct": 442,
+      "top1_accuracy_given_candidate_recall": 0.14230521571152607
+    },
+    {
+      "blend_weight": 0.9,
+      "top1_correct": 439,
+      "top1_accuracy_given_candidate_recall": 0.14133934320669672
+    },
+    {
+      "blend_weight": 0.95,
+      "top1_correct": 433,
+      "top1_accuracy_given_candidate_recall": 0.139407598197038
+    },
+    {
+      "blend_weight": 1.0,
+      "top1_correct": 16,
+      "top1_accuracy_given_candidate_recall": 0.0051513200257566
+    }
+  ],
+  "safe_fallback_used": false,
+  "grouped_cross_validation": [
+    {
+      "fold": 1,
+      "candidate_rows": 217236,
+      "pairwise_training_rows": 176616,
+      "positives": 856,
+      "roc_auc": 0.5385821461767244,
+      "average_precision": 0.004524179537271833,
+      "top1_accuracy_given_candidate_recall": 0.008375209380234505
+    },
+    {
+      "fold": 2,
+      "candidate_rows": 217232,
+      "pairwise_training_rows": 170444,
+      "positives": 989,
+      "roc_auc": 0.5671813443669826,
+      "average_precision": 0.005198106235777429,
+      "top1_accuracy_given_candidate_recall": 0.0
+    },
+    {
+      "fold": 3,
+      "candidate_rows": 217235,
+      "pairwise_training_rows": 174230,
+      "positives": 906,
+      "roc_auc": 0.544785833677808,
+      "average_precision": 0.004433080183956468,
+      "top1_accuracy_given_candidate_recall": 0.0031446540880503146
+    },
+    {
+      "fold": 4,
+      "candidate_rows": 217235,
+      "pairwise_training_rows": 173758,
+      "positives": 917,
+      "roc_auc": 0.5696288158826877,
+      "average_precision": 0.004942495359254634,
+      "top1_accuracy_given_candidate_recall": 0.0061633281972265025
+    },
+    {
+      "fold": 5,
+      "candidate_rows": 217233,
+      "pairwise_training_rows": 175208,
+      "positives": 886,
+      "roc_auc": 0.5525255906036997,
+      "average_precision": 0.004444614738363758,
+      "top1_accuracy_given_candidate_recall": 0.00819672131147541
+    }
+  ],
+  "seed": 42,
+  "feature_names": [
+    "heuristic_confidence",
+    "retrieval",
+    "metric_fit",
+    "type_fit",
+    "period_fit",
+    "role_fit",
+    "proof_valid",
+    "operation_match",
+    "proof_depth",
+    "operand_count",
+    "direct",
+    "percentage_answer",
+    "answer_log_magnitude",
+    "answer_negative",
+    "operation_lookup",
+    "operation_table_aggregate",
+    "operation_additive",
+    "operation_division",
+    "operation_multiplication",
+    "operation_composite",
+    "metric_period_interaction",
+    "role_operation_interaction",
+    "specific_proof"
+  ],
+  "dataset_path": "data/raw/train.json",
+  "dataset_sha256": "49f237eb9779b569473b26b08048867d04635a7cc39ad6a7a5664c55bb428db6",
+  "split": "train",
+  "reference_usage": "training labels only; references are never exposed to retrieval, candidate construction or decoding",
+  "selector_training_candidate_pool": {
+    "retrieval_top_k": 48,
+    "direct_pool_limit": 48,
+    "derived_pool_limit": 192,
+    "deployment_direct_limit": 48,
+    "deployment_derived_limit": 192,
+    "policy": "fit on the frozen deployment population; learned influence is chosen by grouped out-of-fold safe blending"
+  }
+}

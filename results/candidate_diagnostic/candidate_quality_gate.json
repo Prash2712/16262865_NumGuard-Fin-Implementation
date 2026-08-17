@@ -1,0 +1,25 @@
+{
+  "candidate_recall": 0.48679678530424797,
+  "candidate_recall_preselector": 0.48794489092996557,
+  "candidate_recall_unpruned_same_retrieval": 0.547646383467279,
+  "expanded_ledger_candidate_recall_diagnostic": 0.582089552238806,
+  "minimum_candidate_recall": 0.3,
+  "direct_reference_recall": 0.8,
+  "minimum_direct_recall": 0.75,
+  "failure_stage_counts": {
+    "success": 424,
+    "candidate_generation": 191,
+    "operation_schema": 120,
+    "retrieval_or_bounded_context": 66,
+    "bounded_pruning": 37,
+    "extraction_or_program_constant": 27,
+    "retrieval": 5,
+    "selector_ranking": 1
+  },
+  "examples": 871,
+  "dataset_path": "data/raw/dev.json",
+  "dataset_sha256": "a847fb7e0d61a3125a1e2909852df6b89f1ee64d2c5ff1bf689e332214deee51",
+  "selector_file": "models/candidate_selector.json",
+  "reference_usage": "references are used only after lattice construction for diagnostic labels and gate metrics",
+  "passed": true
+}

@@ -1,0 +1,197 @@
+{
+  "created_at_utc": "2026-08-17T01:01:41.833345+00:00",
+  "status": "passed",
+  "scope": "local technical, evidence-integrity and package-hygiene validation",
+  "checks": [
+    {
+      "check": "At least 145 automated tests passed",
+      "passed": true
+    },
+    {
+      "check": "All 12 transparent validation cases were audited",
+      "passed": true
+    },
+    {
+      "check": "All 11 supported fixture answers were recalled",
+      "passed": true
+    },
+    {
+      "check": "The deliberately unsupported fixture produced an explicit abstention",
+      "passed": true
+    },
+    {
+      "check": "Hard locks produced no constraint escapes",
+      "passed": true
+    },
+    {
+      "check": "Every hard-lock numeric response carried a valid proof",
+      "passed": true
+    },
+    {
+      "check": "Committed hard-lock certificates contain structured evidence claims",
+      "passed": true
+    },
+    {
+      "check": "Committed hard-lock certificates record candidate confidence",
+      "passed": true
+    },
+    {
+      "check": "Prompt, timing and operation-diagnostic fields are present",
+      "passed": true
+    },
+    {
+      "check": "Every method was evaluated on the same fixtures",
+      "passed": true
+    },
+    {
+      "check": "Thirteen methods produced 156 paired fixture records",
+      "passed": true
+    },
+    {
+      "check": "No duplicate method/example pairs are present",
+      "passed": true
+    },
+    {
+      "check": "The validation run used one configuration",
+      "passed": true
+    },
+    {
+      "check": "All applicable candidate-mechanism counterfactual checks passed",
+      "passed": true
+    },
+    {
+      "check": "Counterfactual output is labelled at the correct assurance layer",
+      "passed": true
+    },
+    {
+      "check": "All five perturbation families were exercised",
+      "passed": true
+    },
+    {
+      "check": "Total candidate bounds were respected",
+      "passed": true
+    },
+    {
+      "check": "Direct-candidate bounds were respected",
+      "passed": true
+    },
+    {
+      "check": "Derived-candidate bounds were respected",
+      "passed": true
+    },
+    {
+      "check": "Legacy submission-facing columns are absent",
+      "passed": true
+    },
+    {
+      "check": "Core implementation, result and assurance files are present",
+      "passed": true
+    },
+    {
+      "check": "JSONL stores proof certificates as nested objects",
+      "passed": true
+    },
+    {
+      "check": "Stored development predictions contain 11,323 rows",
+      "passed": true
+    },
+    {
+      "check": "Stored development evidence covers 13 methods and 871 examples",
+      "passed": true
+    },
+    {
+      "check": "Stored development predictions contain no duplicate pairs",
+      "passed": true
+    },
+    {
+      "check": "Every stored method covers all 871 examples",
+      "passed": true
+    },
+    {
+      "check": "Stored baseline correct-answer count is internally consistent",
+      "passed": true
+    },
+    {
+      "check": "Stored baseline provenance-error count is internally consistent",
+      "passed": true
+    },
+    {
+      "check": "Stored selector-guided correct-answer count is internally consistent",
+      "passed": true
+    },
+    {
+      "check": "Stored selector-guided provenance-error count is internally consistent",
+      "passed": true
+    },
+    {
+      "check": "Stored fragment-ablation escape count is internally consistent",
+      "passed": true
+    },
+    {
+      "check": "Stored candidate-recall count is internally consistent",
+      "passed": true
+    },
+    {
+      "check": "Stored method summary regenerates from the prediction records",
+      "passed": true
+    },
+    {
+      "check": "Stored paired comparisons regenerate from the prediction records",
+      "passed": true
+    },
+    {
+      "check": "Stored selector hash matches the retained selector file",
+      "passed": true
+    },
+    {
+      "check": "Semantic calibration hash matches stored predictions",
+      "passed": true
+    },
+    {
+      "check": "Provenance calibration hash matches stored predictions",
+      "passed": true
+    },
+    {
+      "check": "Stored semantic and provenance gate decisions are represented correctly",
+      "passed": true
+    },
+    {
+      "check": "All JSON files use strict JSON without NaN or Infinity",
+      "passed": true
+    },
+    {
+      "check": "Excel files contain no document-property metadata",
+      "passed": true
+    },
+    {
+      "check": "PNG figures contain no ancillary metadata chunks",
+      "passed": true
+    },
+    {
+      "check": "Stored artefacts contain no local filesystem traces",
+      "passed": true
+    },
+    {
+      "check": "Repository contains no caches, hidden system files or iteration-labelled artefacts",
+      "passed": true
+    },
+    {
+      "check": "The Colab notebook contains no saved outputs, execution counts or author metadata",
+      "passed": true
+    },
+    {
+      "check": "Unused duplicate configuration files were removed",
+      "passed": true
+    }
+  ],
+  "summary": {
+    "automated_tests": 145,
+    "fixture_examples": 12,
+    "paired_fixture_rows": 156,
+    "methods": 13,
+    "counterfactual_checks": 52,
+    "stored_development_rows": 11323,
+    "stored_development_examples": 871,
+    "hard_lock_constraint_escapes": 0
+  }
+}

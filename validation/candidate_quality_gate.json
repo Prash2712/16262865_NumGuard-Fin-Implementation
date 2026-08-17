@@ -1,0 +1,19 @@
+{
+  "candidate_recall": 0.9166666666666666,
+  "candidate_recall_preselector": 0.9166666666666666,
+  "candidate_recall_unpruned_same_retrieval": 0.9166666666666666,
+  "expanded_ledger_candidate_recall_diagnostic": 0.9166666666666666,
+  "minimum_candidate_recall": 0.3,
+  "direct_reference_recall": 1.0,
+  "minimum_direct_recall": 0.75,
+  "failure_stage_counts": {
+    "success": 11,
+    "operation_schema": 1
+  },
+  "examples": 12,
+  "dataset_path": "data/fixtures/finqa_structured_fixture.json",
+  "dataset_sha256": "314aa7463a65c8d23778fc8bea99302deac3f4b80ecce93c8d5689fb289a13fd",
+  "selector_file": null,
+  "reference_usage": "references are used only after lattice construction for diagnostic labels and gate metrics",
+  "passed": true
+}

@@ -1,0 +1,60 @@
+{
+  "run_type": "empirical_experiment",
+  "created_at_utc": "2026-08-01T12:44:34.719043+00:00",
+  "dataset_split": "dev",
+  "dataset_path": "data/raw/dev.json",
+  "dataset_sha256": "a847fb7e0d61a3125a1e2909852df6b89f1ee64d2c5ff1bf689e332214deee51",
+  "examples": 871,
+  "numeric_only": true,
+  "model_name": "google/flan-t5-base",
+  "model_revision": "7bcac572ce56db69c1ea7c8af255c5d7c9672fc2",
+  "requested_device": "cuda",
+  "resolved_device": "cuda",
+  "seed": 42,
+  "configuration_id": "4c6099853873",
+  "risk_threshold": 0.55,
+  "selector_file": "models/candidate_selector.json",
+  "selector_sha256": "948a7426c566fc27da80699c7bf8ef6f3cf4f6ec7d2f552656e255d344b2b0e0",
+  "methods": [
+    "baseline",
+    "provenance_prompt",
+    "candidate_menu_prompt",
+    "posthoc_verifier",
+    "fragment_token_lock_ablation",
+    "soft_prefix_bias_1",
+    "soft_prefix_bias_3",
+    "soft_prefix_bias_5",
+    "soft_prefix_bias_10",
+    "direct_proof_lock",
+    "derivation_proof_lock",
+    "selector_guided_proof_lock",
+    "risk_controlled_proof_lock"
+  ],
+  "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+  "hardware": {
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+    "processor": "x86_64",
+    "torch_cuda_available": true,
+    "torch_cuda_version": "12.8",
+    "cudnn_version": 91900,
+    "gpu_count": 1,
+    "gpu_names": [
+      "Tesla T4"
+    ]
+  },
+  "dependencies": {
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6",
+    "pandas": "2.2.2",
+    "numpy": "2.0.2",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.6.1"
+  },
+  "command": [
+    "scripts/run_dev_calibration.py"
+  ],
+  "resumed_from_checkpoint": false,
+  "checkpoint_path": null,
+  "example_ids_file": "results/development/example_ids.txt",
+  "example_ids_sha256": "3a38c7f6d4808f567f6084af2640ee7c4f543cbb0987e333cf2d5d4fae9ac0ba"
+}

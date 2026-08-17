@@ -1,0 +1,58 @@
+{
+  "run_type": "engineering_validation",
+  "created_at_utc": "2026-08-17T01:01:37.364753+00:00",
+  "dataset_split": "dev",
+  "dataset_path": "data/fixtures/finqa_structured_fixture.json",
+  "dataset_sha256": "314aa7463a65c8d23778fc8bea99302deac3f4b80ecce93c8d5689fb289a13fd",
+  "examples": 12,
+  "numeric_only": true,
+  "model_name": "heuristic-engineering-check",
+  "model_revision": null,
+  "requested_device": "none",
+  "resolved_device": "none",
+  "seed": 42,
+  "configuration_id": "5f2fe0be4b67",
+  "risk_threshold": 0.55,
+  "selector_file": null,
+  "selector_sha256": null,
+  "methods": [
+    "baseline",
+    "provenance_prompt",
+    "candidate_menu_prompt",
+    "posthoc_verifier",
+    "fragment_token_lock_ablation",
+    "soft_prefix_bias_1",
+    "soft_prefix_bias_3",
+    "soft_prefix_bias_5",
+    "soft_prefix_bias_10",
+    "direct_proof_lock",
+    "derivation_proof_lock",
+    "selector_guided_proof_lock",
+    "risk_controlled_proof_lock"
+  ],
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "hardware": {
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "processor": "",
+    "torch_cuda_available": false,
+    "torch_cuda_version": null,
+    "cudnn_version": null,
+    "gpu_count": 0,
+    "gpu_names": []
+  },
+  "dependencies": {
+    "torch": "2.10.0+cpu",
+    "transformers": "not-installed",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0"
+  },
+  "command": [
+    "scripts/run_engineering_verification.py"
+  ],
+  "resumed_from_checkpoint": false,
+  "checkpoint_path": "validation/engineering_checks/.run_state/predictions_checkpoint.jsonl",
+  "example_ids_file": "validation/engineering_checks/example_ids.txt",
+  "example_ids_sha256": "8e6da09a603c09e252c71e6f35fc3113b028f563fa9e2adaadaadaad8661681b"
+}

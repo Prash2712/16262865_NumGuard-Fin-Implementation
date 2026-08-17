@@ -1,0 +1,139 @@
+{
+  "research_question": "Can a table-aware, proof-locked decoding lattice reduce unsupported numerical generation while preserving useful answer coverage and derivation fidelity in financial question answering, without model fine-tuning?",
+  "splits": {
+    "selector_training": "FinQA train",
+    "development_candidate_gate_and_calibration": "FinQA dev",
+    "frozen_final_evaluation": "FinQA public test"
+  },
+  "model": "google/flan-t5-base",
+  "model_fine_tuning": false,
+  "candidate_selector": {
+    "type": "cross-validated safe blend of heuristic and within-question pairwise linear proof ranker",
+    "training_split": "train",
+    "grouped_cross_validation": "source report/document",
+    "path": "models/candidate_selector.json",
+    "reference_usage": "candidate correctness labels only",
+    "selection_order": "score before frozen candidate bounds",
+    "training_objective": "positive proof preferred to 24 strongest within-question negatives",
+    "blend_grid": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "tie_rule": "prefer lower learned weight",
+    "feature_schema": "proof-family feature set",
+    "training_population": "frozen deployment candidate population"
+  },
+  "seed": 42,
+  "numeric_only": true,
+  "retrieval_top_k": 48,
+  "maximum_direct_candidates": 48,
+  "maximum_derived_candidates": 192,
+  "maximum_candidates_including_abstention": 241,
+  "candidate_gate": {
+    "minimum_overall_recall": 0.3,
+    "minimum_direct_or_aggregate_recall": 0.75
+  },
+  "calibration": {
+    "confidence_level": 0.95,
+    "minimum_coverage": 0.05,
+    "minimum_accepted": 30,
+    "semantic_target_risk": 0.2,
+    "provenance_target_risk": 0.01,
+    "infeasible_policy": "block public-test execution",
+    "semantic_method": "selector_guided_proof_lock"
+  },
+  "methods": [
+    "baseline",
+    "provenance_prompt",
+    "candidate_menu_prompt",
+    "posthoc_verifier",
+    "fragment_token_lock_ablation",
+    "soft_prefix_bias_1",
+    "soft_prefix_bias_3",
+    "soft_prefix_bias_5",
+    "soft_prefix_bias_10",
+    "direct_proof_lock",
+    "derivation_proof_lock",
+    "selector_guided_proof_lock",
+    "risk_controlled_proof_lock"
+  ],
+  "primary_outcomes": [
+    "numeric_answer_accuracy",
+    "valid_numeric_response_rate",
+    "unsupported_complete_answer_rate",
+    "candidate_recall",
+    "selection_accuracy_given_candidate_recall",
+    "proof_validity_rate_given_numeric_response",
+    "semantic_risk_coverage_curve",
+    "provenance_risk_coverage_curve",
+    "abstention_metrics",
+    "latency_and_truncation"
+  ],
+  "statistical_plan": {
+    "bootstrap_repetitions": 2000,
+    "confidence_level": 0.95,
+    "paired_test": "McNemar exact"
+  },
+  "test_threshold_policy": "Use only feasible thresholds saved from development; do not retune on public test.",
+  "max_input_tokens": 512,
+  "max_new_tokens": 24,
+  "num_beams": 4,
+  "resume_checkpointing": true,
+  "operation_diagnostic": "coarse proof-operation agreement; not official FinQA program accuracy",
+  "counterfactual_audits": {
+    "candidate_mechanism": {
+      "split": "test",
+      "sample_limit": 150,
+      "seed": 42
+    },
+    "model_output": {
+      "split": "test",
+      "sample_limit": 50,
+      "seed": 42,
+      "method": "risk_controlled_proof_lock"
+    }
+  },
+  "manual_failure_review": {
+    "sample_size": 120,
+    "blinded_file": "failure_review_blinded.xlsx",
+    "key_file": "failure_review_key.csv"
+  },
+  "candidate_diagnostics": [
+    "final_frozen_lattice_recall",
+    "preselector_recall",
+    "unpruned_same_retrieval_recall",
+    "expanded_full_ledger_recall",
+    "reference_operand_ledger_and_retrieval_coverage",
+    "failure_stage_attribution"
+  ],
+  "proof_prior": {
+    "method": "selector_guided_proof_lock",
+    "strength": 2.0,
+    "constraint": "complete-answer trie remains hard; prior applies only among legal branches"
+  },
+  "prompt_budget": {
+    "maximum_input_tokens": 512,
+    "evidence_display_limit": 24,
+    "candidate_display_limit": 24,
+    "full_lattice_enforced_outside_prompt": true
+  }
+}

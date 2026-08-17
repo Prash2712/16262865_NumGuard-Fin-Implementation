@@ -1,0 +1,86 @@
+[
+  {
+    "id": "fixture/report_01.pdf-1",
+    "pre_text": ["Amounts in millions."],
+    "post_text": ["Interest expense declined year over year."],
+    "table": [["", "2009", "2008"], ["Interest expense", "380", "420"], ["Revenue", "3,800", "3,500"]],
+    "qa": {"question": "What was the interest expense in 2009?", "answer": "380", "exe_ans": "380", "program": "table_lookup(interest expense, 2009)"}
+  },
+  {
+    "id": "fixture/report_02.pdf-1",
+    "pre_text": ["Figures in millions."],
+    "post_text": [],
+    "table": [["", "2022", "2021"], ["Revenue", "560", "498"], ["Operating expense", "410", "390"]],
+    "qa": {"question": "What was the percentage change in revenue from 2021 to 2022?", "answer": "12.45%", "exe_ans": "12.45%", "program": "divide(subtract(560,498),498)"}
+  },
+  {
+    "id": "fixture/report_03.pdf-1",
+    "pre_text": ["Amounts in thousands."],
+    "post_text": [],
+    "table": [["", "2023", "2022"], ["Operating expenses", "3,100", "2,900"], ["Revenue", "4,200", "3,800"]],
+    "qa": {"question": "What was the increase in operating expenses from 2022 to 2023?", "answer": "200", "exe_ans": "200", "program": "subtract(3100,2900)"}
+  },
+  {
+    "id": "fixture/report_04.pdf-1",
+    "pre_text": ["Dollars in millions."],
+    "post_text": [],
+    "table": [["", "2023"], ["Net income", "1,100"], ["Revenue", "4,200"]],
+    "qa": {"question": "What was the net income margin in 2023?", "answer": "26.19%", "exe_ans": "26.19%", "program": "divide(1100,4200)"}
+  },
+  {
+    "id": "fixture/report_05.pdf-1",
+    "pre_text": ["Amounts in millions."],
+    "post_text": [],
+    "table": [["", "2023"], ["North America revenue", "1,250"], ["Europe revenue", "750"], ["Total assets", "8,000"]],
+    "qa": {"question": "What was the combined revenue from North America and Europe in 2023?", "answer": "2000", "exe_ans": "2000", "program": "add(1250,750)"}
+  },
+  {
+    "id": "fixture/report_06.pdf-1",
+    "pre_text": ["Amounts in millions."],
+    "post_text": [],
+    "table": [["", "2023", "2022"], ["Revenue", "420", "380"], ["Debt", "120", "150"]],
+    "qa": {"question": "What was the ratio of 2023 revenue to 2022 revenue?", "answer": "1.1053", "exe_ans": "1.1053", "program": "divide(420,380)"}
+  },
+  {
+    "id": "fixture/report_07.pdf-1",
+    "pre_text": ["Amounts in millions."],
+    "post_text": [],
+    "table": [["", "2023", "2022"], ["Capital expenditure", "80", "100"], ["Cash flow", "210", "190"]],
+    "qa": {"question": "What was the average capital expenditure in 2022 and 2023?", "answer": "90", "exe_ans": "90", "program": "average(80,100)"}
+  },
+  {
+    "id": "fixture/report_08.pdf-1",
+    "pre_text": ["The company reported 21% as its effective tax rate in 2023."],
+    "post_text": ["Revenue was $4.2 billion."],
+    "table": [["Metric", "2023"], ["Tax provision", "231"], ["Pretax income", "1,100"]],
+    "qa": {"question": "What was the effective tax rate in 2023?", "answer": "21%", "exe_ans": "21%", "program": "text_lookup(21%)"}
+  },
+  {
+    "id": "fixture/report_09.pdf-1",
+    "pre_text": ["Share counts are in thousands."],
+    "post_text": [],
+    "table": [["", "2023"], ["Weighted average diluted shares", "84,500"], ["Basic shares", "82,000"]],
+    "qa": {"question": "How many weighted average diluted shares were reported in 2023?", "answer": "84500", "exe_ans": "84500", "program": "table_lookup(weighted average diluted shares,2023)"}
+  },
+  {
+    "id": "fixture/report_10.pdf-1",
+    "pre_text": ["Amounts in millions."],
+    "post_text": [],
+    "table": [["", "2020", "2019"], ["Net loss", "(45)", "(30)"], ["Revenue", "900", "850"]],
+    "qa": {"question": "What was the net loss in 2020?", "answer": "-45", "exe_ans": "-45", "program": "table_lookup(net loss,2020)"}
+  },
+  {
+    "id": "fixture/report_11.pdf-1",
+    "pre_text": ["Amounts in millions."],
+    "post_text": [],
+    "table": [["", "2018", "2017"], ["Total operating expenses", "41,932", "40,000"], ["Aircraft fuel expense", "9,500", "8,900"]],
+    "qa": {"question": "What were total operating expenses in 2018?", "answer": "41932", "exe_ans": "41932", "program": "table_lookup(total operating expenses,2018)"}
+  },
+  {
+    "id": "fixture/report_12.pdf-1",
+    "pre_text": ["The report gives revenue and expenses but no dividend per share."],
+    "post_text": [],
+    "table": [["", "2023"], ["Revenue", "4200"], ["Operating expenses", "3100"]],
+    "qa": {"question": "What was the dividend per share in 2023?", "answer": "0.85", "exe_ans": "0.85", "program": "unsupported_fixture_reference"}
+  }
+]
