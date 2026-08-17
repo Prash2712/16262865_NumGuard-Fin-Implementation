@@ -92,9 +92,7 @@ Five historical implementation archives are preserved in `development_history/`.
 
 Raw FinQA benchmark files and Hugging Face model weights are **not redistributed**. They are downloaded through the supplied scripts. See `data/README.md` and `THIRD_PARTY_NOTICES.md`.
 
-## GitHub note
 
-This complete package includes historical ZIP archives and a frozen evidence ZIP for traceability. The largest retained archive is below GitHub's 100 MiB single-file limit, but the repository is intentionally larger than a minimal source-only repository. For university marking, a private repository is generally preferable because the dissertation contains student and ethics identifiers.
 
 ## Claim boundary
 
