@@ -43,3 +43,6 @@ NumGuard-Fin-Rerun-Evidence.sha256
 !evidence_archives/*.zip
 !evidence_archives/*.sha256
 !docs/technical_validation/*.sha256
+
+# Keep reproducibility manifests in Git
+!reproducibility/*.sha256

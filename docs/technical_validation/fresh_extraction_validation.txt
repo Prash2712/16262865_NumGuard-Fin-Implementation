@@ -1,0 +1,61 @@
+SOURCE MANIFEST PASSED (57 files)
+........................................................................ [ 49%]
+........................................................................ [ 99%]
+.                                                                        [100%]
+145 passed in 7.40s
+             example_id                                                             question reference_answer                                  reference_program         operation  alternative_operations reference_operation reference_operations  intent_reference_operation_match  reference_operand_count  reference_operands_in_ledger  reference_operands_in_ledger_rate  reference_operands_retrieved  reference_operands_retrieved_rate  ledger_items  retrieved_items  direct_candidates  derived_candidates  candidate_recall  candidate_recall_preselector  candidate_recall_unpruned_same_retrieval  expanded_ledger_candidate_recall_diagnostic failure_stage
+fixture/report_01.pdf-1                               What was the interest expense in 2009?              380               table_lookup(interest expense, 2009)     direct_lookup                                table_lookup         table_lookup                              True                        0                             0                                NaN                             0                                NaN             4                4                  4                   0              True                          True                                      True                                         True       success
+fixture/report_02.pdf-1         What was the percentage change in revenue from 2021 to 2022?           12.45%                      divide(subtract(560,498),498) percentage_change difference|margin|ratio              divide      divide|subtract                              True                        2                             2                                1.0                             2                                1.0             4                4                  4                 110              True                          True                                      True                                         True       success
+fixture/report_03.pdf-1       What was the increase in operating expenses from 2022 to 2023?              200                                subtract(3100,2900)        difference                                    subtract             subtract                              True                        2                             2                                1.0                             2                                1.0             4                4                  4                  26              True                          True                                      True                                         True       success
+fixture/report_04.pdf-1                              What was the net income margin in 2023?           26.19%                                  divide(1100,4200)            margin                   ratio              divide               divide                              True                        2                             2                                1.0                             2                                1.0             2                2                  2                   6              True                          True                                      True                                         True       success
+fixture/report_05.pdf-1 What was the combined revenue from North America and Europe in 2023?             2000                                      add(1250,750)               sum               table_sum                 add                  add                              True                        2                             2                                1.0                             2                                1.0             3                3                  3                   1              True                          True                                      True                                         True       success
+fixture/report_06.pdf-1                  What was the ratio of 2023 revenue to 2022 revenue?           1.1053                                    divide(420,380)             ratio                                      divide               divide                              True                        2                             2                                1.0                             2                                1.0             4                4                  4                 105              True                          True                                      True                                         True       success
+fixture/report_07.pdf-1           What was the average capital expenditure in 2022 and 2023?               90                                    average(80,100)           average           table_average             average              average                              True                        2                             2                                1.0                             2                                1.0             4                4                  4                  73              True                          True                                      True                                         True       success
+fixture/report_08.pdf-1                             What was the effective tax rate in 2023?              21%                                   text_lookup(21%)     direct_lookup                                 text_lookup          text_lookup                              True                        0                             0                                NaN                             0                                NaN             4                4                  4                   0              True                          True                                      True                                         True       success
+fixture/report_09.pdf-1      How many weighted average diluted shares were reported in 2023?            84500 table_lookup(weighted average diluted shares,2023)     direct_lookup                                table_lookup         table_lookup                              True                        0                             0                                NaN                             0                                NaN             2                2                  2                   0              True                          True                                      True                                         True       success
+fixture/report_10.pdf-1                                       What was the net loss in 2020?              -45                        table_lookup(net loss,2020)     direct_lookup                                table_lookup         table_lookup                              True                        0                             0                                NaN                             0                                NaN             4                4                  4                   0              True                          True                                      True                                         True       success
+
+Operation counts: {'direct_lookup': 6, 'percentage_change': 1, 'difference': 1, 'margin': 1, 'sum': 1, 'ratio': 1, 'average': 1}
+Candidate recall (final frozen lattice): 0.917
+Candidate recall (before selector): 0.917
+Candidate recall (unpruned same retrieval): 0.917
+Direct/aggregate reference recall: 1.000
+Expanded-ledger candidate recall diagnostic: 0.917
+Failure-stage counts: {'success': 11, 'operation_schema': 1}
+Dataset SHA-256: 314aa7463a65c8d23778fc8bea99302deac3f4b80ecce93c8d5689fb289a13fd
+Saved: validation/dataset_audit.csv
+CANDIDATE QUALITY GATE PASSED
+Completed 1/12 examples
+Completed 2/12 examples
+Completed 3/12 examples
+Completed 4/12 examples
+Completed 5/12 examples
+Completed 6/12 examples
+Completed 7/12 examples
+Completed 8/12 examples
+Completed 9/12 examples
+Completed 10/12 examples
+Completed 11/12 examples
+Completed 12/12 examples
+{
+  "predictions_csv": "validation/engineering_checks/predictions.csv",
+  "summary_csv": "validation/engineering_checks/method_summary.csv",
+  "comparisons_csv": "validation/engineering_checks/paired_comparisons.csv",
+  "review_xlsx": "validation/engineering_checks/failure_review_blinded.xlsx",
+  "review_key_csv": "validation/engineering_checks/failure_review_key.csv",
+  "tables_xlsx": "validation/engineering_checks/research_tables.xlsx"
+}
+Configuration ID: 5f2fe0be4b67
+VALIDATION PASSED
+Rows: 156
+Methods: {'baseline': 12, 'candidate_menu_prompt': 12, 'derivation_proof_lock': 12, 'direct_proof_lock': 12, 'fragment_token_lock_ablation': 12, 'posthoc_verifier': 12, 'provenance_prompt': 12, 'risk_controlled_proof_lock': 12, 'selector_guided_proof_lock': 12, 'soft_prefix_bias_1': 12, 'soft_prefix_bias_10': 12, 'soft_prefix_bias_3': 12, 'soft_prefix_bias_5': 12}
+Configuration ID: 5f2fe0be4b67
+                             count  mean
+perturbation                            
+irrelevant_number_injection     12   1.0
+metric_value_swap               11   1.0
+scale_flip                      10   1.0
+support_mask                    12   1.0
+year_value_swap                  7   1.0
+Saved: validation/counterfactual_audit.csv
+TECHNICAL AND PACKAGE VALIDATION PASSED

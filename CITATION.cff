@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this research artefact, please cite the dissertation and repository."
+title: "NumGuard-Fin: Certified Provenance-Constrained Decoding for Verifiable Numerical Reasoning in Financial Question Answering"
+type: software
+authors:
+  - family-names: Balisetty
+    given-names: Prasanth
+version: "1.0"
+date-released: 2026-08-17

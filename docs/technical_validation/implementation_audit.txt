@@ -1,0 +1,89 @@
+NUMGUARD-FIN IMPLEMENTATION — FINAL TECHNICAL AUDIT
+==================================================
+
+Release file: NumGuard-Fin-Implementation-Audited.zip
+SHA-256: f30273c7b18cde2036115e74b6849159491a229b16787a3aad528e4e65f1f624
+Archive size: 3,786,722 bytes
+Archive contents: 108 files and 19 directories
+
+FINAL STATUS: PASSED
+
+Corrections made after the first clean package:
+- Repaired a broken third-party-notice reference.
+- Removed unused configuration files and the unused PyYAML dependency.
+- Prevented the 246 MB selector-training cache from entering the repository.
+- Separated retained development evidence from fresh rerun outputs.
+- Rebuilt the Colab workflow and added deterministic rerun packaging.
+- Replaced non-standard JSON NaN values with strict JSON null values.
+- Made semantic-gate failure a recorded research outcome rather than a script crash.
+- Restored stronger package and evidence quality gates.
+- Removed a duplicate erroneous selector method left in the source.
+- Corrected missing-value handling in proof-operation summary regeneration.
+- Removed stale absolute paths, stale hashes, caches, hidden files, and iteration labels.
+
+Verification completed:
+- PASS: At least 145 automated tests passed
+- PASS: All 12 transparent validation cases were audited
+- PASS: All 11 supported fixture answers were recalled
+- PASS: The deliberately unsupported fixture produced an explicit abstention
+- PASS: Hard locks produced no constraint escapes
+- PASS: Every hard-lock numeric response carried a valid proof
+- PASS: Committed hard-lock certificates contain structured evidence claims
+- PASS: Committed hard-lock certificates record candidate confidence
+- PASS: Prompt, timing and operation-diagnostic fields are present
+- PASS: Every method was evaluated on the same fixtures
+- PASS: Thirteen methods produced 156 paired fixture records
+- PASS: No duplicate method/example pairs are present
+- PASS: The validation run used one configuration
+- PASS: All applicable candidate-mechanism counterfactual checks passed
+- PASS: Counterfactual output is labelled at the correct assurance layer
+- PASS: All five perturbation families were exercised
+- PASS: Total candidate bounds were respected
+- PASS: Direct-candidate bounds were respected
+- PASS: Derived-candidate bounds were respected
+- PASS: Legacy submission-facing columns are absent
+- PASS: Core implementation, result and assurance files are present
+- PASS: JSONL stores proof certificates as nested objects
+- PASS: Stored development predictions contain 11,323 rows
+- PASS: Stored development evidence covers 13 methods and 871 examples
+- PASS: Stored development predictions contain no duplicate pairs
+- PASS: Every stored method covers all 871 examples
+- PASS: Stored baseline correct-answer count is internally consistent
+- PASS: Stored baseline provenance-error count is internally consistent
+- PASS: Stored selector-guided correct-answer count is internally consistent
+- PASS: Stored selector-guided provenance-error count is internally consistent
+- PASS: Stored fragment-ablation escape count is internally consistent
+- PASS: Stored candidate-recall count is internally consistent
+- PASS: Stored method summary regenerates from the prediction records
+- PASS: Stored paired comparisons regenerate from the prediction records
+- PASS: Stored selector hash matches the retained selector file
+- PASS: Semantic calibration hash matches stored predictions
+- PASS: Provenance calibration hash matches stored predictions
+- PASS: Stored semantic and provenance gate decisions are represented correctly
+- PASS: All JSON files use strict JSON without NaN or Infinity
+- PASS: Excel files contain no document-property metadata
+- PASS: PNG figures contain no ancillary metadata chunks
+- PASS: Stored artefacts contain no local filesystem traces
+- PASS: Repository contains no caches, hidden system files or iteration-labelled artefacts
+- PASS: The Colab notebook contains no saved outputs, execution counts or author metadata
+- PASS: Unused duplicate configuration files were removed
+
+Validated counts:
+- Automated tests: 145
+- Transparent fixture examples: 12
+- Paired fixture records: 156
+- Evaluated methods: 13
+- Counterfactual checks: 52
+- Stored development prediction rows: 11323
+- Stored development examples: 871
+- Hard-lock constraint escapes: 0
+
+Archive smoke test:
+- ZIP integrity test passed.
+- The archive was extracted into a fresh directory.
+- run_validation.sh passed from the freshly extracted copy.
+
+Boundary of this audit:
+- Local technical, package-hygiene, stored-evidence, and reproducibility checks are complete.
+- The full FinQA GPU rerun has not yet been executed; this is the next step in Google Colab.
+- Public-test execution remains blocked unless the semantic release gate passes.

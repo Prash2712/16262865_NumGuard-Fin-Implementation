@@ -7,8 +7,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "reproducibility" / "source_manifest.sha256"
-EXCLUDED_TOP_LEVEL = {"validation", "results", "models"}
-EXCLUDED_PARTS = {"__pycache__", ".pytest_cache", ".run_state", ".venv"}
+EXCLUDED_TOP_LEVEL = {"validation", "results", "models", "docs", "development_history", "evidence_archives"}
+EXCLUDED_PARTS = {"__pycache__", ".pytest_cache", ".run_state", ".venv", ".git"}
 EXCLUDED_FILES = {MANIFEST.resolve(), (ROOT / "reproducibility" / "preflight_report.json").resolve()}
 
 
