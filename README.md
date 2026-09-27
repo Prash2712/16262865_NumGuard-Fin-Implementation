@@ -30,6 +30,13 @@ The central research finding is deliberately bounded: the whole-answer lock succ
 
 The repository therefore should not be interpreted as a deployable financial-QA system. It is a research artefact for investigating the boundary between structural provenance control and semantic correctness.
 
+## Tech stack
+
+- Python — reusable `src/` package, evaluation scripts, automated test suite
+- Hugging Face Transformers — model weights for the QA pipeline (downloaded via scripts, not redistributed)
+- pytest — 145+ automated tests plus candidate-mechanism counterfactual checks
+- Google Colab (CUDA runtime) — clean notebook rerun path
+
 ## Repository structure
 
 ```text
@@ -78,8 +85,6 @@ notebooks/NumGuard_Fin_Colab.ipynb
 
 Upload the repository to Google Drive, use a CUDA-enabled Colab runtime, and follow [`RUN_IN_COLAB.md`](RUN_IN_COLAB.md). Fresh outputs are written separately from the retained development evidence. The public-test command must remain blocked unless the semantic release criterion genuinely becomes feasible.
 
-
-
 ## Development history
 
 Five historical implementation archives are preserved in `development_history/`. They are retained as evidence of the design-science iteration trail; the active implementation is the code at repository root. See [`development_history/README.md`](development_history/README.md).
@@ -91,8 +96,6 @@ Five historical implementation archives are preserved in `development_history/`.
 ## Data and model redistribution
 
 Raw FinQA benchmark files and Hugging Face model weights are **not redistributed**. They are downloaded through the supplied scripts. See `data/README.md` and `THIRD_PARTY_NOTICES.md`.
-
-
 
 ## Claim boundary
 
